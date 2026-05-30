@@ -12,6 +12,9 @@ version: 4.1.1.4
 
 # DrissionPage 库版本检查与升级
 
+> **参考文档**：`references/docs/特性与示例/` — 版本功能介绍（3.2 / 4.0 / 4.1 更新内容）
+> **文档映射**：`references/docs-map.md`
+
 ---
 
 ## 快速检查当前状态

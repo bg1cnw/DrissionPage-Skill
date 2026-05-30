@@ -11,6 +11,11 @@ version: 4.1.1.4
 
 # DrissionPage 快速入门
 
+> **参考文档**：`references/docs/入门指南/` — 安装、导入、基本概念、准备工作、设置语言、常见问题、收发数据包、模式切换、自动登录
+> **实战示例**：`references/docs/实战示例/` — 豆瓣图书封面下载、Gitee 自动登录、猫眼 TOP100 采集、星巴克图片下载、多线程多标签页采集
+> **特性对比**：`references/docs/特性与示例/` — 与 selenium/requests 对比、版本功能介绍
+> **文档映射**：`references/docs-map.md`
+
 DrissionPage 是一个 Python 网页自动化工具，既能控制浏览器，也能收发数据包，还能把两者合一。
 语法简洁优雅，无需 webdriver，无需为浏览器版本匹配驱动。
 

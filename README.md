@@ -16,7 +16,14 @@ Drission-Page/
 ├── network/SKILL.md                 Network monitoring
 ├── advanced/SKILL.md                Advanced features
 ├── update/SKILL.md                  Version check & upgrade
-└── evals/                           Evaluation cases
+├── evals/                           Evaluation cases
+├── agents/                          Multi-platform configs
+│   ├── claude.md                    Claude Code agent
+│   └── openai.yaml                  Codex / OpenAI agent
+└── references/                      Shared reference docs
+    ├── docs-map.md                  Task-to-document index
+    ├── chrome-devtools-mcp.md       DevTools MCP collaboration
+    └── docs/                        60+ official Chinese docs
 ```
 
 ## Skill Overview
@@ -33,25 +40,34 @@ Drission-Page/
 | `Drission-Page:update` | 203 | Version check, PyPI comparison, upgrade, breaking changes, environment conflicts |
 | **Total** | **2116** | |
 
-> Verified against DrissionPage **4.1.1.4** API.
+> Verified against DrissionPage **4.1.1.4** API. The `references/docs/` bundle includes 60+ official Chinese docs covering every API in detail — AI assistants check docs first, not training-data memories.
+
+## Key Features
+
+- **Doc-first architecture**: All SKILL.md files reference `references/docs/` — AI reads official docs for API accuracy instead of guessing from training data
+- **Multi-platform**: `agents/` includes configs for Claude Code and Codex/OpenAI
 
 ## Installation
 
 ### Option 1: Clone (recommended)
 
 ```bash
+# Claude Code
 git clone https://github.com/bg1cnw/DrissionPage-Skill.git ~/.claude/skills/Drission-Page
+
+# Codex
+git clone https://github.com/bg1cnw/DrissionPage-Skill.git ~/.codex/skills/Drission-Page
 ```
 
-Restart Claude Code. Skills are auto-discovered — just mention DrissionPage in conversation.
+Restart your AI assistant. Skills are auto-discovered — just mention DrissionPage in conversation.
 
 ### Option 2: Manual
 
-Download the repository and place all files under `~/.claude/skills/Drission-Page/`.
+Download the repository and place under your assistant's skills directory (e.g. `~/.claude/skills/Drission-Page/` or `~/.codex/skills/Drission-Page/`).
 
 ### Verify
 
-Type `/Drission-Page` in Claude Code. If you see the routing prompt, installation succeeded.
+Type `/Drission-Page` in your AI assistant. If you see the routing prompt, installation succeeded.
 
 ### Library dependency
 

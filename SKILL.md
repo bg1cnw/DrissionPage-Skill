@@ -23,6 +23,27 @@ version: 4.1.1.4
 
 ---
 
+## 对象选型
+
+| 场景 | 正确对象 | 示例参考 |
+|------|----------|----------|
+| 纯浏览器控制（登录、截图、缓存图片） | `ChromiumPage` | `references/docs/实战示例/🌠 Gitee 自动登录.md`、`references/docs/实战示例/🌠 豆瓣图书封面下载.md` |
+| 纯请求/解析（无需浏览器） | `SessionPage` | `references/docs/实战示例/🌠 星巴克图片下载.md`、`references/docs/入门指南/🗺️ 收发数据包.md` |
+| 需要浏览器 + 请求双模式切换 | `WebPage` | `references/docs/入门指南/🗺️ 模式切换.md` |
+| 多标签页操作 | `ChromiumPage` + `get_tab()` | `references/docs/实战示例/🌠 多线程多标签页采集.md` |
+
+---
+
+## 文档优先原则
+
+遇到 API 签名不确定、参数记不清、想知道某功能是否存在时，**必须先查 `references/docs/` 中的详细文档**，不要依赖模型训练数据中的 API 记忆。查找路径：
+
+1. 先看 `references/docs-map.md` 快速定位目标文档
+2. 再读对应 `references/docs/` 中的详细说明
+3. 优先参考 `references/docs/实战示例/`，其次是栏目文档
+
+---
+
 ## 工作流程
 
 ### Step 1：理解目标

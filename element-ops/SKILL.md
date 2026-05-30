@@ -13,6 +13,10 @@ version: 4.1.1.4
 
 # DrissionPage 元素操作大全
 
+> **参考文档**：`references/docs/控制浏览器/🛰️ 元素交互.md` — 点击、输入、hover、check
+> **补充文档**：`references/docs/控制浏览器/🛰️ 动作链.md`、`references/docs/控制浏览器/🛰️ 上传文件.md`、`references/docs/控制浏览器/🛰️ 获取元素信息.md`、`references/docs/控制浏览器/🛰️ 获取网页信息.md`、`references/docs/特性与示例/⭐ 获取元素属性.md`
+> **文档映射**：`references/docs-map.md`
+
 ---
 
 ## 点击操作

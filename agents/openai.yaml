@@ -1,0 +1,56 @@
+interface:
+  display_name: "Drission-Page 技能集"
+  short_description: "DrissionPage 路由 + 7 子技能：快速入门、元素定位、浏览器操作、元素交互、网络功能、高级功能、版本升级"
+  default_prompt: |
+    使用 Drission-Page 技能集处理当前任务。
+    单一问题由对应子技能直接处理；复合任务由总路由拆解调度。
+    优先查 references/docs-map.md 定位文档，再读 references/docs/ 获取 API 细节。
+
+skills:
+  - name: Drission-Page
+    description: 总路由 — 复合任务规划与子技能调度
+    triggers:
+      - 编写完整爬虫或自动化脚本
+      - 涉及多个 DrissionPage 功能领域
+
+  - name: Drission-Page:quickstart
+    description: 快速入门 — 安装、页面对象选择、第一个示例
+    triggers:
+      - 首次使用 DrissionPage
+      - 不确定该用哪个页面对象
+
+  - name: Drission-Page:find-elements
+    description: 元素定位 — 定位语法、NoneElement、遍历
+    triggers:
+      - 查找元素、定位语法问题
+      - ele() 找不到元素排查
+
+  - name: Drission-Page:browser-ops
+    description: 浏览器操作 — 标签页、导航、截图、iframe、Cookie
+    triggers:
+      - 管理标签页、导航页面
+      - 截图、iframe、弹窗、Cookie 操作
+
+  - name: Drission-Page:element-ops
+    description: 元素交互 — 点击、输入、下拉框、上传、拖拽、键盘
+    triggers:
+      - 元素点击、输入、表单操作
+      - 下拉框、文件上传、拖拽、键盘
+
+  - name: Drission-Page:network
+    description: 网络功能 — 监听、HTTP 请求、下载、会话 Cookie
+    triggers:
+      - 网络数据包监听、API 请求
+      - 文件下载、HTTP 客户端使用
+
+  - name: Drission-Page:advanced
+    description: 高级功能 — 等待、反爬、Shadow DOM、Options、并发
+    triggers:
+      - 等待策略、反爬检测绕过
+      - Shadow DOM、无头模式、多实例并发
+
+  - name: Drission-Page:update
+    description: 版本检查 — PyPI 对比、升级、破坏性变更
+    triggers:
+      - 检查版本、升级库
+      - 了解破坏性变更

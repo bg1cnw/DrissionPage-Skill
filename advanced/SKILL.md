@@ -14,6 +14,10 @@ version: 4.1.1.4
 
 # DrissionPage 高级功能与进阶技巧
 
+> **参考文档**：`references/docs/控制浏览器/🛰️ 等待.md` — 智能等待机制
+> **补充文档**：`references/docs/控制浏览器/🛰️ 浏览器启动设置.md`、`references/docs/控制浏览器/🛰️ 连接浏览器.md`、`references/docs/控制浏览器/🥦 创建全新的浏览器.md`、`references/docs/控制浏览器/🥦 无头模式.md`、`references/docs/控制浏览器/🥦 浏览器多开.md`、`references/docs/控制浏览器/🌐 连接 TgeBrowser 指纹浏览器.md`、`references/docs/入门指南/🗺️ 模式切换.md`、`references/docs/进阶使用/⚙️ 全局设置.md`、`references/docs/进阶使用/⚙️ 配置文件的使用.md`、`references/docs/进阶使用/⚙️ 命令行的使用.md`、`references/docs/进阶使用/⚙️ 实用工具.md`
+> **文档映射**：`references/docs-map.md`
+
 ---
 
 ## 智能等待机制（告别 sleep）

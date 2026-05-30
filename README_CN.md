@@ -7,7 +7,8 @@ DrissionPage 专项 skill 集合，为支持技能功能的 AI 编程助手（Cl
 
 ```
 Drission-Page/
-├── README.md                        本文件
+├── README.md                        英文 README（GitHub 首页）
+├── README_CN.md                     本文件（中文）
 ├── SKILL.md                         总路由（入口）
 ├── quickstart/SKILL.md              快速入门
 ├── find-elements/SKILL.md           元素定位
@@ -16,7 +17,14 @@ Drission-Page/
 ├── network/SKILL.md                 网络功能
 ├── advanced/SKILL.md                高级功能
 ├── update/SKILL.md                  版本检查与升级
-└── evals/                           评估测试用例
+├── evals/                           评估测试用例
+├── agents/                          多平台配置
+│   ├── claude.md                    Claude Code 配置
+│   └── openai.yaml                  Codex / OpenAI 配置
+└── references/                      共享参考文档
+    ├── docs-map.md                  任务→文档查找索引
+    ├── chrome-devtools-mcp.md       DevTools MCP 协作规范
+    └── docs/                        60+ 篇官方中文文档
 ```
 
 ## Skill 一览
@@ -33,22 +41,30 @@ Drission-Page/
 | `Drission-Page:update` | 203 | 版本检查、PyPI 最新版对比、升级操作、破坏性变更说明、版本回退、环境冲突排查 |
 | **合计** | **2116** | |
 
-> 经 4.1.1.2 版本 API 验证，已确认所有代码示例使用正确的 API。
+> 经 4.1.1.4 版本 API 验证。`references/docs/` 包含 60+ 篇官方中文文档，AI 助手会先查文档再给出答案，而非依赖训练数据中的 API 记忆。
+
+## 核心特性
+
+- **文档优先**：所有 SKILL.md 均引用 `references/docs/` — AI 以官方文档为准，避免训练数据中的 Selenium 风格 API 串扰
+- **多平台支持**：`agents/` 包含 Claude Code 和 Codex/OpenAI 的配置文件
 
 ## 安装
 
 ### 方式一：直接克隆（推荐）
 
 ```bash
-# 克隆到 AI 助手的 skills 目录（以 Claude Code 为例）
+# Claude Code
 git clone https://github.com/bg1cnw/DrissionPage-Skill.git ~/.claude/skills/Drission-Page
+
+# Codex
+git clone https://github.com/bg1cnw/DrissionPage-Skill.git ~/.codex/skills/Drission-Page
 ```
 
 安装后重启 AI 助手即可自动生效。当你在对话中提到 DrissionPage 相关需求时，AI 助手会自动调用对应 skill。
 
 ### 方式二：手动复制
 
-下载本仓库所有文件，放入对应 AI 助手的 skills 目录（如 Claude Code 为 `~/.claude/skills/Drission-Page/`）。
+下载本仓库所有文件，放入对应 AI 助手的 skills 目录（如 Claude Code 为 `~/.claude/skills/Drission-Page/`，Codex 为 `~/.codex/skills/Drission-Page/`）。
 
 ### 验证安装
 

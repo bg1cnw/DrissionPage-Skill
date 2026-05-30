@@ -12,6 +12,10 @@ version: 4.1.1.4
 
 # DrissionPage 元素定位语法大全
 
+> **参考文档**：`references/docs/控制浏览器/🔦 定位语法.md` — 定位语法详解
+> **补充文档**：`references/docs/控制浏览器/🔦 语法速查表.md`、`references/docs/控制浏览器/🔦 页面或元素内查找.md`、`references/docs/控制浏览器/🔦 相对定位.md`、`references/docs/控制浏览器/🔦 简化写法.md`、`references/docs/控制浏览器/🔦 行为模式.md`、`references/docs/控制浏览器/🔦 在结果列表中筛选.md`
+> **文档映射**：`references/docs-map.md`
+
 DrissionPage 提供了一套独特的简洁定位语法，比 CSS/XPath 更易写，同时也完全兼容标准选择器。
 
 ---
