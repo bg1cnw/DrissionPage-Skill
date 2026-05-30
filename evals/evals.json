@@ -1,0 +1,131 @@
+{
+  "skill_name": "drissionpage-series",
+  "evals": [
+    {
+      "id": 1,
+      "skill": "drissionpage:quickstart",
+      "prompt": "我想用 Python 控制浏览器自动登录一个网站，听说 DrissionPage 比 selenium 好用，但不知道怎么安装和开始。请帮我写一个完整的入门示例，包括：安装方式、创建页面对象、访问网页、找到并操作元素。我用的是 Windows，Chrome 浏览器。",
+      "expected_output": "包含 pip install 命令、ChromiumPage 创建示例、ele() 查找元素、click()/input() 操作的可运行代码，以及关键概念的中文说明",
+      "files": []
+    },
+    {
+      "id": 2,
+      "skill": "drissionpage:quickstart",
+      "prompt": "DrissionPage 里的 ChromiumPage、SessionPage、WebPage 有什么区别？我的需求是：先用浏览器登录，登录后调用一些 JSON API 接口拿数据，应该用哪个？怎么切换？",
+      "expected_output": "三种页面对象的对比说明，WebPage 的 change_mode() 切换方式，带代码示例",
+      "files": []
+    },
+    {
+      "id": 3,
+      "skill": "drissionpage:find-elements",
+      "prompt": "用 DrissionPage 怎么查找元素？我知道 selenium 用 find_element(By.CSS_SELECTOR, '...') 这种写法，但 DrissionPage 的语法感觉不一样。请告诉我：怎么按 id/class/属性/文本查找，怎么处理找不到的情况（NoneElement），怎么在某个父元素下继续查找子元素。",
+      "expected_output": "#id、.class、@attr=value、文本模糊匹配等语法示例，NoneElement 判断处理，从元素出发查找子元素的代码",
+      "files": []
+    },
+    {
+      "id": 4,
+      "skill": "drissionpage:advanced",
+      "prompt": "我在用 DrissionPage 抓取一个电商页面，发现有些数据在 Shadow DOM 里，ele() 找不到。另外有些元素是 Ajax 动态加载的，要等它出现才能操作。这两种情况怎么处理？",
+      "expected_output": "Shadow DOM 穿透方法（shadow_root），等待元素的 wait.eles_loaded() / wait.ele_displayed() 用法，带代码示例",
+      "files": []
+    },
+    {
+      "id": 5,
+      "skill": "drissionpage:browser-ops",
+      "prompt": "用 DrissionPage 怎么同时操作多个标签页？比如我想点击一个链接打开新标签，然后同时在原来的标签和新标签里各做一些操作，不用来回切换。另外怎么截取整个页面的截图（包含视口外的内容）？",
+      "expected_output": "new_tab() 获取标签对象、多标签同时操作示例，wait.new_tab() 等待新标签，get_screenshot(full_page=True) 截图代码",
+      "files": []
+    },
+    {
+      "id": 6,
+      "skill": "drissionpage:element-ops",
+      "prompt": "我需要在网页表单里做这些操作：1) 在输入框里慢慢输入文字（模拟真人）；2) 选择下拉框里的某个选项；3) 上传一个文件；4) 点击一个按钮但这个按钮被另一个元素遮住了点不到。这些怎么实现？",
+      "expected_output": "逐字符输入模拟真人速度、select() / select.by_text() 下拉选择、input[type=file] 上传、click(by_js=True) 穿透遮挡，带完整代码示例",
+      "files": []
+    },
+    {
+      "id": 7,
+      "skill": "drissionpage:network",
+      "prompt": "我想抓取一个网站的 Ajax 分页数据，这些数据是通过 XHR 请求动态加载的，直接解析 DOM 拿不到完整数据。用 DrissionPage 怎么监听这些网络请求，直接拿到接口返回的 JSON？最好能循环翻页，每页都拿到数据。",
+      "expected_output": "listen.start() 启动监听、listen.wait() 等待数据包、packet.response.body 获取 JSON，循环翻页完整示例",
+      "files": []
+    },
+    {
+      "id": 8,
+      "skill": "drissionpage:advanced",
+      "prompt": "我用 DrissionPage 写了个爬虫，但有两个问题：1) 网站能检测到我是自动化程序（navigator.webdriver），怎么绕过？2) 某些操作需要等页面某个区域加载完才能进行，用 time.sleep() 太慢，有没有更精确的等待方式？另外，能不能不每次都重新打开浏览器，复用已经打开的？",
+      "expected_output": "disable-blink-features 参数、run_js 消除 webdriver 特征、wait.eles_loaded()/ele_displayed() 精确等待、复用浏览器 set_local_port 方案，带代码示例",
+      "files": []
+    },
+    {
+      "id": 9,
+      "skill": "drissionpage:update",
+      "prompt": "我的 DrissionPage 项目之前能跑，最近报 ImportError 说找不到某个类。我记得好像升级过 pip 包。怎么检查当前安装的是哪个版本？和 PyPI 最新版对比一下？如果是版本问题怎么回退到我之前的版本？还有怎么看是不是装到了错的 Python 环境里？",
+      "expected_output": "pip show DrissionPage 检查版本、PyPI 最新版对比命令、pip install DrissionPage==x.x.x 回退、python -m pip 解决环境冲突的方法",
+      "files": []
+    },
+    {
+      "id": 10,
+      "skill": "drissionpage:update",
+      "prompt": "我看 DrissionPage 的版本号是 4.1.1.x 这种四段式的，想了解一下 3.x 升级到 4.x 有哪些破坏性变更，我的老代码里还有 MixPage 和 .find() 这种写法，是不是要改？升级前有什么注意事项？",
+      "expected_output": "3.x→4.x 破坏性变更列表：MixPage→WebPage、.find()→.ele() 等，升级前测试建议，版本锁定方法",
+      "files": []
+    },
+    {
+      "id": 11,
+      "skill": "drissionpage:browser-ops",
+      "prompt": "我要爬取一个网站，它把表单放在 iframe 里，我用 page.ele('#form-input') 找不到这个输入框。听说 DrissionPage 不需要像 selenium 那样 switch_to.frame()，那 iframe 里的元素怎么操作？还有怎么查看当前页面一共有几个 iframe？",
+      "expected_output": "get_frame() 获取 iframe 对象的三种方式（id/name/索引）、在 iframe 内查找元素、自动穿透 iframe 查找、get_frames() 获取所有 iframe 列表",
+      "files": []
+    },
+    {
+      "id": 12,
+      "skill": "drissionpage:network",
+      "prompt": "我需要爬一个后台管理系统，必须先登录才能看到数据。登录页面有验证码要手动处理（我可以自己输入），但登录之后的数据都是 JSON API 返回的，不需要浏览器渲染。用 DrissionPage 能不能：先在浏览器里登录（让我手动输入验证码），登录成功后切到纯请求模式去调 API 拿数据？这样应该比一直开着浏览器快很多。",
+      "expected_output": "WebPage 两步流程：① d 模式处理浏览器登录 → ② change_mode('s') 切换请求模式（自动继承 Cookie）→ ③ SessionPage 方式调 API，带完整代码和模式切换原理说明",
+      "files": []
+    },
+    {
+      "id": 13,
+      "skill": "drissionpage:element-ops",
+      "prompt": "目标网站有个滑块验证码，我需要用鼠标按住滑块，然后缓慢向右拖动到指定位置再松开。另外还有个菜单，鼠标悬停上去才会展开子菜单，离开就消失，我需要在悬停后立即点击子菜单里的某个选项。这些连续的鼠标动作怎么实现？",
+      "expected_output": "page.actions 鼠标动作链：hold_on() 按住 → move() 缓慢移动 → release() 松开完成滑块拖动；move_to() 悬停触发菜单展开，配合 click() 点击子菜单项",
+      "files": []
+    },
+    {
+      "id": 14,
+      "skill": "drissionpage:advanced",
+      "prompt": "我要同时爬 5 个不同的网站，每次都重新打开浏览器很慢。有没有办法只开一个浏览器，用不同标签页同时抓多个网站？或者开两个独立的浏览器实例，每个登不同账号？怎么避免两个实例互相干扰？",
+      "expected_output": "两个方案对比：① 单浏览器多标签 new_tab() + threading 并发（共享 Cookie）；② ChromiumOptions 不同端口 set_local_port() 创建独立 Chromium 实例（隔离登录态），带完整并发代码",
+      "files": []
+    },
+    {
+      "id": 15,
+      "skill": "drissionpage:browser-ops",
+      "prompt": "我的爬虫每天都要登录同一个网站，每次重新登录很麻烦而且容易触发风控。能不能第一次登录成功后把 Cookie 保存到文件，以后每次运行直接加载 Cookie 跳过登录？保存和加载的代码怎么写？",
+      "expected_output": "登录后用 page.cookies().as_dict() 获取 Cookie → json.dump 保存文件 → 下次运行时 page.set.cookies() 加载 → 刷新页面进入登录态，完整持久化代码",
+      "files": []
+    },
+    {
+      "id": 16,
+      "skill": "drissionpage:advanced",
+      "prompt": "我写了个爬虫在服务器上跑（Linux 没桌面环境），每次启动都报错说找不到 display。另外服务器网络慢，有些页面加载超时，图片加载也浪费时间。怎么配置让 DrissionPage 在没有桌面的服务器上也能跑，并且关闭图片加载、设置超时时间？",
+      "expected_output": "ChromiumOptions 无头模式配置：headless()、no_imgs()、--no-sandbox、--disable-gpu、--disable-dev-shm-usage，set_timeouts() 超时设置，完整服务器部署配置代码",
+      "files": []
+    },
+    {
+      "id": 17,
+      "skill": "drissionpage:find-elements",
+      "prompt": "我在解析一个表格页面，需要从一个已知的单元格出发，找它上一行同一列的单元格（即上方兄弟元素），还要找它后面紧跟的同级元素。DrissionPage 有没有类似 jQuery 的 prev()、next()、parent() 这种相对定位方法？",
+      "expected_output": "parent() 获取父元素、prev()/next() 前后兄弟元素、prevs()/nexts() 所有兄弟、before()/after() DOM 位置查找，以及带过滤条件的用法如 next('tag:div')",
+      "files": []
+    },
+    {
+      "id": 18,
+      "skill": "drissionpage:network",
+      "prompt": "我需要从一个网站批量下载 200 个 PDF 文件，文件列表页有个下载按钮，点击后会触发浏览器下载。用 DrissionPage 的 click.to_download() 怎么处理这种场景？下载过程中如果想看进度或者中途取消某个下载任务怎么做？",
+      "expected_output": "click.to_download(save_path, rename, suffix) 一键下载用法、download_begin 获取任务对象监控进度、mission.wait() 等待单个完成、downloads_done() 等待全部、批量下载循环示例",
+      "files": []
+    }
+  ]
+}
