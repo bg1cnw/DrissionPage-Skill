@@ -1,9 +1,7 @@
-# Drission-Page Skills
+# Drission-Page Skills — [EN](README.md)
 
-> [English README](README.md)
-
-DrissionPage 专项 skill 集合，为 Claude Code 提供 DrissionPage 库的精准知识支持。
-当你在项目中使用 DrissionPage 时，Claude 会自动调用相应 skill，给出基于正确 API 的回答，避免与 selenium 等其他库混淆。
+DrissionPage 专项 skill 集合，为支持技能功能的 AI 编程助手（Claude Code、Codex、Cursor 等）提供 DrissionPage 库的精准知识支持。
+当你在项目中使用 DrissionPage 时，AI 助手会自动调用相应 skill，给出基于正确 API 的回答，避免与 selenium 等其他库混淆。
 
 ## 目录结构
 
@@ -42,19 +40,19 @@ Drission-Page/
 ### 方式一：直接克隆（推荐）
 
 ```bash
-# 克隆到 Claude Code 的 skills 目录
+# 克隆到 AI 助手的 skills 目录（以 Claude Code 为例）
 git clone https://github.com/bg1cnw/DrissionPage-Skill.git ~/.claude/skills/Drission-Page
 ```
 
-安装后重启 Claude Code 即可自动生效。当你在对话中提到 DrissionPage 相关需求时，Claude 会自动调用对应 skill。
+安装后重启 AI 助手即可自动生效。当你在对话中提到 DrissionPage 相关需求时，AI 助手会自动调用对应 skill。
 
 ### 方式二：手动复制
 
-下载本仓库所有文件，放入 `~/.claude/skills/Drission-Page/` 目录。
+下载本仓库所有文件，放入对应 AI 助手的 skills 目录（如 Claude Code 为 `~/.claude/skills/Drission-Page/`）。
 
 ### 验证安装
 
-在 Claude Code 中输入 `/Drission-Page`，如果看到路由提示则安装成功。
+在 AI 助手中输入 `/Drission-Page`，如果看到路由提示则安装成功。
 
 ### 依赖
 
@@ -68,7 +66,7 @@ pip install DrissionPage>=4.1.1.4
 
 ### 自动触发（推荐）
 
-直接用中文描述需求，Claude 会自动识别并调用对应 skill：
+直接用中文描述需求，AI 助手会自动识别并调用对应 skill：
 
 ```
 "帮我写一个登录后抓取数据的爬虫"    → Drission-Page（总路由规划）
@@ -134,7 +132,7 @@ pip install DrissionPage>=4.1.1.4
 | Ajax 监听（listen API）| 100% | 25% | +75pp |
 | **平均** | **100%** | **35%** | **+65pp** |
 
-无 Skill 时，Claude 倾向于混用 selenium 风格 API（`find_element(By.ID, ...)`、`send_keys()` 等），这些方法在 DrissionPage 中不存在。
+无 Skill 时，AI 助手倾向于混用 selenium 风格 API（`find_element(By.ID, ...)`、`send_keys()` 等），这些方法在 DrissionPage 中不存在。
 
 ## 相关链接
 

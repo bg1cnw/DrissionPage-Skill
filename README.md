@@ -1,6 +1,6 @@
-# Drission-Page Skills
+# Drission-Page Skills — [中文](README_CN.md)
 
-A curated skill set that equips Claude Code with precise knowledge of the [DrissionPage](https://github.com/g1879/DrissionPage) library — a Python browser automation and HTTP client that unifies Selenium-style control with requests-style speed.
+A curated skill set for AI coding assistants (Claude Code, Codex, Cursor, and any skill-supporting system) — providing precise knowledge of the [DrissionPage](https://github.com/g1879/DrissionPage) library, a Python browser automation and HTTP client that unifies Selenium-style control with requests-style speed.
 
 ## Structure
 
